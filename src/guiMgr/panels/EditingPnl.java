@@ -628,7 +628,7 @@ public class EditingPnl extends JPanel{
 //			}
 				//现在设置每个素材控件长度并计算每个组maxWidth
 			for(Clip clp:elms) {
-				clp.setSize(getLogicalWidth(clp.length),this.GROUP_VIEW_ELE_HEIGHT);//暂定组视图的素材为定高
+				clp.setSize(getLogicalWidth(clp.length), GROUP_VIEW_ELE_HEIGHT);//暂定组视图的素材为定高
 				
 				Main.gm.setMXWidth(clp.groupId, clp.getWidth());
 				Main.gm.addMXHeight(clp.groupId, this.GROUP_VIEW_ELE_HEIGHT+this.ELE_SPACE);
@@ -908,7 +908,7 @@ public class EditingPnl extends JPanel{
 	 * 剪开素材，这是与镜头同步的
 	 * @param obj
 	 * @param dFromObjStart 相对于obj开始的x
-	 *//*Love you,Ashley.*/
+	 */
 	public int cutClipApart(Clip obj,int dFromObjStart) {
 		Clip temp=new Clip();
 		temp.title=obj.title+"-";
@@ -921,7 +921,7 @@ public class EditingPnl extends JPanel{
 		if(dFromObjStart<=0||temp.length<=0) {
 			return -1;
 		}
-		obj.length=dFromObjStart;
+		obj.length=dFromObjStart;/*Love you,Ashley.*/
 		Clip cp=this.addElement(temp.title, temp.type, temp.length, temp.track, temp.x,null);
 //		//现在新增镜头对象
 //		Main.gui.sbp.sb.addShot(cp,Main.gui.sbp.sb.getShotByClipUID(obj.uid).sceneid

@@ -159,8 +159,8 @@ public class MainWd implements WindowListener, ComponentListener, KeyListener {
 	public void windowClosing(WindowEvent arg0) {
 		mwd.setVisible(false);
 		Main.gui.bgp.ib.setProgressText("’˝‘⁄¥¢¥Ê…Ë÷√...");
-		Main.cfg.set("mwd.isMax",mwd.getExtendedState()==JFrame
-				.MAXIMIZED_BOTH?true:false);
+		Main.cfg.set("mwd.isMax", mwd.getExtendedState() == JFrame
+				.MAXIMIZED_BOTH);
 		Main.cfg.set("mwd.width", mwd.getWidth());
 		Main.cfg.set("mwd.height", mwd.getHeight());
 		Main.cfg.set("mwd.x", mwd.getX());
